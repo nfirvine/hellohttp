@@ -1,3 +1,4 @@
 FROM scratch
-ADD bin/helloworld /helloworld
-CMD ["/helloworld"]
+ADD hellohttp /hellohttp
+EXPOSE 80
+ENTRYPOINT ["/hellohttp"]
