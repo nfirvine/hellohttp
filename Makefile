@@ -2,6 +2,9 @@ version := $(shell cat VERSION)
 tag := quay.io/nfirvine/hellohttp
 localport := 8081
 
+hellohttp: hellohttp.go version.go
+	go build
+
 version.go: version.go.tmpl
 	sed "s/{version}/$(version)/g" < version.go.tmpl > version.go
 
